@@ -26,7 +26,6 @@ contract StudentRegistration {
 
     //Make sure that student cannot register twice
 
-
     //Have a function to get student details and it accepts one argument
     function getStudentDetails(address studentID) public view returns() {
         return studentDetails;
