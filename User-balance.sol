@@ -14,7 +14,7 @@ function deposit(uint256 amount) public view {
 }
 
     //checkBalance() this function searches for the user balance inside the balance mapping and returns the balance of whoever is calling the contract.
-function checkBalance(address _address, uint256 _amount) public view returns(uint256) {
+function checkBalance() public external returns(uint256) {
     uint256 userBalance = balance[msg.sender];
     return userBalance;
 }
