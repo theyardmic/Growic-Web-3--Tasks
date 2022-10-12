@@ -3,12 +3,12 @@ pragma solidity ^0.8.7;
 
 contract UserDetails {
 
-struct ownerDetails {
+struct Details {
     string  name;
     uint256 age;
 }
 
- ownerDetails[] public _details;
+ Details[] public _details;
 
     //this function accepts 2 arguments that represent the details of the user calling the smart contract and it saves them into a defined struct,
  function setUserDetails(string calldata name, uint256 age) public view {
