@@ -1,19 +1,29 @@
 //SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-contract UserDetails {
-         //defined struct
-    struct Details{
-     string name;
-     uint256 age;
-    }
-         Details[] public details;
-    //this function accepts 2 arguments that represent the details of the user calling the smart contract and it saves them into a defined struct,
- function setUserDetails(string calldata name, uint256 age) external {
-        string name = _name;
-        uint256 age = _age;
+pragma solidity ^0.8.7;
 
-     details.push(Details({name: _name, age: _age}));
+contract UserDetails {
+
+struct ownerDetails {
+    string  _name;
+    uint256 _age;
+}
+
+ ownerDetails[] public _details;
+
+    //this function accepts 2 arguments that represent the details of the user calling the smart contract and it saves them into a defined struct,
+ function setUserDetails(string calldata name, uint256 age) public view {
+       string name = _name;
+       uint256 age = _age;
+
+        _details.push(Details({name: _name, age: _age}));    
     }
+
+//getUserDetail() this function retrieves and returns the details saved for the user calling the contract.
+    function getuserDetail() external view {
+        return (_details[]);
+    }
+
+
 }
 
 }
