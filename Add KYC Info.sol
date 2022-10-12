@@ -4,8 +4,8 @@ pragma solidity ^0.8.7;
 contract UserDetails {
 
 struct ownerDetails {
-    string  _name;
-    uint256 _age;
+    string  name;
+    uint256 age;
 }
 
  ownerDetails[] public _details;
