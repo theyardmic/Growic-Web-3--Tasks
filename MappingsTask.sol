@@ -7,6 +7,8 @@ contract Balance {
 accountOwner = msg.sender;
 
 }
+
+//mapping declaration
    mapping(address => uint256) public balance;
    
     //deposit (uint256 amount) this function accepts one argument and it saves the amount a user is depositing into a mapping,
