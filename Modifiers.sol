@@ -3,12 +3,12 @@ pragma solidity ^0.8.7;
 
 contract Funds {
 
-constructor() {
+    constructor() {
     address payable owner = msg.sender;
 
- }
+    }
 
-    uint256  amount;
+    uint256 public amount;
     mapping(address => uint256) public balance;
 
 // Create a deposit function that allows anybody to send funds.
@@ -48,10 +48,9 @@ constructor() {
 
     }
 
+
  //Create a private constant variable called Fee
-      uint256 private constant Fee = 0.01 ether;
-
-
+      uint256 private constant Fee;
 
 //Create a modifier that checks if the value(_amount) it accepts is less than the Fee, revert with a custom error AmountToSmall()
     modifier feePay() {
@@ -60,8 +59,5 @@ constructor() {
             }
         _;
 }
-
-
-
 
 }
