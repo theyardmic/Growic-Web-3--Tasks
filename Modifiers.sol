@@ -24,6 +24,13 @@ mapping(address => amount) public depositAmount;
         
     }
 
+//Add an addFund function to  accept the amount to be added and update the mapping to have the new balance
+
+// create a modifier that only allows users that have deposited using the deposit function, to increase their balance on the mapping. 
+modifier onlyDeposited() {
+    require(amount !=0, "You have not deposited funds yet!" );
+    _;
+}
 
 
 }
