@@ -39,6 +39,15 @@ modifier onlyDeposited() {
 
     }
 
+//Create a modifier that checks if the value(_amount) it accepts is less than the Fee, revert with a custom error AmountToSmall()
+    modifier feePay(uint256 _amount) {
+        constant private Fee;
+            if (_amount < Fee){
+                revert("Amount too small");
+            }
+        _;
+}
+
 
 
 
