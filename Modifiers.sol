@@ -13,4 +13,17 @@ function deposit(address _address, uint amount) public payable{
 mapping(address => amount) public depositAmount;
 }
 
+//create a modifier that only allows the owner of the contract to withdraw the funds.
+    modifier onlyOwner(address) {
+        require(msg.sender == owner, "You're not the Owner!");
+            _;
+    }
+
+//Add a withdraw function and 
+    function withdrawFunds() public payable onlyOwner{
+        
+    }
+
+
+
 }
