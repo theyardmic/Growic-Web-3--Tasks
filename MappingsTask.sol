@@ -13,7 +13,8 @@ accountOwner = msg.sender;
    
     //deposit (uint256 amount) this function accepts one argument and it saves the amount a user is depositing into a mapping,
 function deposit(uint256 amount) public payable {
-  balance[msg.sender += amount];
+ uint256 amount = msg.value;
+ balance[msg.sender += amount];
  
 }
 
