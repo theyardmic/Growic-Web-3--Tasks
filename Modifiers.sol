@@ -35,6 +35,7 @@ struct Details {
     uint256 age;
 }
 
+  //array initialization
  Details[] public _details;
 
     //this function accepts 2 arguments that represent the details of the user calling the smart contract and it saves them into a defined struct,
