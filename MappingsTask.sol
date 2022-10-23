@@ -12,8 +12,8 @@ accountOwner = msg.sender;
    mapping(address => uint256) public balance;
    
     //deposit (uint256 amount) this function accepts one argument and it saves the amount a user is depositing into a mapping,
-function deposit(uint256 amount) public view {
-    uint256 amount = _amount;
+function deposit(uint256 amount) public payable {
+  balance[msg.sender += amount];
  
 }
 
